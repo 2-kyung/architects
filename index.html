@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/61ba857e0b.js" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('.fa-bars').on({
+                'click': function(){
+                    $('ul').slideToggle()
+                }
+            })
+
+            $('#click01 span').click(function(){
+                 $('#click01').hide()
+            })
+
+           
+        })
+
+        
+
+
+    </script>
+   
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+        a { text-decoration: none; color: inherit;}
+        #wrap { width: 100%; margin: 0 auto; display: flex; flex-flow: column;}
+        h3 { font-size: 25px; font-weight: 500;}
+
+        /* header */
+        header { z-index: 300; width: 100%; margin: 0 auto; display: flex; flex-flow: row nowrap; position: sticky; top: 0; background-color: white;}
+        h1 { padding: 20px; margin-left: 100px;}
+        .fa-bars { display: none;}
+        ul { position: absolute; top: 0; right: 100px;}
+        ul li { float: left; padding: 30px; font-weight: bold;}
+        ul li:hover { color: lightgray; scale: 1.2; transition: 1s;}
+
+
+        /* main */
+        main { width: 90%; margin: 0 auto; display: flex; flex-flow: column;}
+
+        #imgSlider { width: 100%; margin: 0 auto; position: relative; height: 50vh;}
+        #imgSlider img { width: 100%; height: 100%;}
+        #imgSlider h1 { margin: 0 auto; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: 0 0 10px black;}
+
+        #project { width: 100%; margin: 70px auto;}
+        #project h3 { margin: 30px;}
+        #project img { text-align: center; width: 23%; height: 15vw; margin: 5px; object-fit: cover; filter: saturate(0);}
+        #project img:hover { filter: saturate(1); transition: 1s;}
+
+        #about { width: 100%;}
+        #about h3 { margin: 30px;}
+        #about .about-p { margin: 30px;}
+        #pf { display: flex; justify-content: space-around;}
+        #profile { width: 20vw; margin: 5px;}
+        #profile img { width: 100%; height: 13vw; filter: saturate(0);}
+        #profile h4, h5 { margin: 10px auto;}
+        #profile h5 { color: #aaaaaa;}
+        #profile button { border: none; width: 100%; margin: 20px auto; padding: 5px;}
+
+        #contact { width: 100%; margin: 70px auto;}
+        #contact h3 { margin: 30px;}
+        hr, p { margin-top: 30px;}
+        input { width: 100%; border: 1px lightgray solid; padding: 10px; margin: 10px auto; border-radius: 0%;}
+        #contact button { border: none; background-color: black; color: white; padding: 10px; margin: 10px auto;}
+        iframe { width: 100%;}
+
+        /* footer */
+        footer p { width: 100%; height: 100px; background-color: black; color: white; text-align: center; line-height: 100px;}
+
+        /* click */
+        #click01 { width: 80%; text-align: center; color: white; background-color: rgba(0,0,0,0.7); position: fixed; top: 10%; left: 10%; display:none; }
+        #click01 img { width: 50%; margin-top: 80px;}
+        #click01 h3 { margin: 30px auto;}
+        #click01 p { width: 80%; margin: 0px auto 80px auto;}
+        #click01 span { font-size: 30px; color: white; position: absolute; top: 15px; right: 25px; cursor: pointer;}
+
+
+        @media screen and (max-width: 800px) {
+            /* header */
+            h1 { padding: 20px; margin-left: 50px;}
+            .fa-bars { padding: 30px; position: absolute; top: 0; right: 50px; font-size: 30px; display: block;}
+            ul { position: absolute; top: 80px; right: 0; background-color: white; width: 100%; display: none;}
+            ul li { width: 100%; text-align: center;}
+            ul li:hover { background-color: #f0f0f0;}
+
+            #project { text-align: center;}
+            #project h3 { margin: 30px;}
+            #project img { width: 90%; height: 50vw; margin: 10px;}
+
+            #about, #pf { display: flex; flex-flow: column; align-items: center;}
+            #about h3 { margin: 30px; text-align: center;}
+            #about .about-p { margin: 30px; text-align: center;}
+            #profile { width: 90%; margin: 5px;}
+            #profile img { width: 100%; height: 50vw; margin: 30px auto;}
+            #profile button { float: right; border: none; width: 30%; margin-top: -140px; padding: 10px;}
+
+            #click01 { width: 100%; text-align: center; color: white; background-color: rgba(0,0,0,0.7); position: fixed; top: 200px; left: 0;}
+            #click01 img { width: 90%;}
+            #click01 h3 { margin: 30px auto;}
+            #click01 p { width: 80%; margin: 50px auto;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="#">ARCHITECTS</a></h1>
+            <i class="fa-solid fa-bars"></i>
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#project"><li>Project</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#contact"><li>Contact</li></a>
+            </ul>
+        </header>
+
+        <main>
+            <div id="imgSlider">
+                <img src="img/top.jpg">
+                <h1>Architects</h1>
+            </div>
+            <div id="project">
+                <h3>Project</h3>
+                <img class="pro" src="img/img (1).jpg">
+                <img class="pro" src="img/img (2).jpg">
+                <img class="pro" src="img/img (3).jpg">
+                <img class="pro" src="img/img (4).jpg">
+                <img class="pro" src="img/img (5).jpg">
+                <img class="pro" src="img/img (6).jpg">
+                <img class="pro" src="img/img (7).jpg">
+                <img class="pro" src="img/img (8).jpg">
+            </div>
+            <div id="about">
+                <h3>About</h3>
+                <p class="about-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum possimus quo adipisci dolor omnis dolorum quod distinctio nostrum repellat voluptatibus. Non odit perspiciatis placeat nam sed! Libero eveniet doloribus numquam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam assumenda officiis deserunt impedit repellendus tempore est quam, laborum doloribus aperiam nostrum exercitationem accusantium saepe vero eligendi natus illum! Voluptatum, similique?</p>
+                <div id="pf">
+                <div id="profile" class="profile01">
+                    <img src="img/animal (1).jpg">
+                    <h4>NAME 01</h4>
+                    <h5>Job</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quis voluptate quisquam autem. Labore laboriosam sequi, sint molestiae</p>
+                    <button>Contact</button>
+                </div>
+                <div id="profile" class="profile02">
+                    <img src="img/animal (2).jpg">
+                    <h4>NAME 02</h4>
+                    <h5>Job</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quis voluptate quisquam autem. Labore laboriosam sequi, sint molestiae</p>
+                    <button>Contact</button>
+                </div>
+                <div id="profile" class="profile03">
+                    <img src="img/animal (3).jpg">
+                    <h4>NAME 03</h4>
+                    <h5>Job</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quis voluptate quisquam autem. Labore laboriosam sequi, sint molestiae</p>
+                    <button>Contact</button>
+                </div>
+                <div id="profile" class="profile04">
+                    <img src="img/animal (4).jpg">
+                    <h4>NAME 04</h4>
+                    <h5>Job</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quis voluptate quisquam autem. Labore laboriosam sequi, sint molestiae</p>
+                    <button>Contact</button>
+                </div>
+            </div>
+            </div>
+            <div id="contact">
+                <h3>Contact</h3>
+                <hr>
+                <p>Let's get in touch and talk about your next project</p>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <input type="text" placeholder="Comment">
+                <button>SEND MESSAGE</button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25268.85072569456!2d126.7728384!3d37.658458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c85ed25c4399f%3A0x480ac483ea83a85c!2z64W4656Y7ZWY64qUIOu2hOyImOuMgA!5e0!3m2!1sko!2skr!4v1695264759790!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </main>
+        <footer>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </footer>
+    </div>
+
+
+    <div id="click01">
+        <span>X</span>
+        <img src="img/img (1).jpg">
+        <h3>Project</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aspernatur aliquid nam ex architecto sequi alias at expedita neque! Dolor, nemo ducimus suscipit doloribus totam culpa provident repudiandae omnis hic!</p>
+    </div>
+    
+    <script>
+        const a = document.querySelectorAll('#project img')
+        const big = document.querySelector('#click01 img')
+
+        for (let i of a){
+            i.addEventListener('click',function(){
+                document.querySelector('#click01').style.display="block";
+            })
+        }
+
+        for (let i of a){
+            i.onclick=change;
+        }
+
+        function change() {
+          big.src = this.src;
+        }
+    </script>
+</body>
+</html>
